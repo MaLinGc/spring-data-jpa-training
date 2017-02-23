@@ -2,3 +2,15 @@
 *.jar
 *.war
 *.iml
+/target
+/.idea
+*.iml
+*.ipr
+*.iws
+.idea
+*/*.log
+*/target/
+*.DS_Store
+*.classpath
+*.settings
+*.project
