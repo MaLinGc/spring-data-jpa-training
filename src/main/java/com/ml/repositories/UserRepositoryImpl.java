@@ -18,14 +18,13 @@ public class UserRepositoryImpl {
     @PersistenceContext
     private EntityManager em;
 
-    public Page<User> findByFilter(Filter filter, Pageable pageable) {
+    public Page<User> findUsersByFilter(Filter filter, Pageable pageable) {
         StringBuffer hql = new StringBuffer("from User u where 1 = 1 ");
         Map<String, Object> parameterMap = new HashMap<>();
         if (StringUtils.hasText(filter.getName())) {
             hql.append("and u.name like :name ");
-            parameterMap.put("name", "%" + filter.getName() + "%");
+            parameterMap.put("name" , "%" + filter.getName() + "%");
         }
-
         Query query = em.createQuery(hql.toString());
         for (Map.Entry<String, Object> entry : parameterMap.entrySet())
             query.setParameter(entry.getKey(), entry.getValue());
