@@ -1,4 +1,4 @@
-package com.ml.commons.base;
+package com.ml.controller;
 
 import com.ml.commons.utils.DateUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -43,7 +43,6 @@ public abstract class BaseController {
                 setValue(date == null ? null : new Timestamp(date.getTime()));
             }
         });
-
     }
 
 }

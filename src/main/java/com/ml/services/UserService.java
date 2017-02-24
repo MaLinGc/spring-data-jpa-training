@@ -1,6 +1,5 @@
 package com.ml.services;
 
-import com.ml.commons.result.Result;
 import com.ml.entities.User;
 import com.ml.repositories.UserRepository;
 import com.ml.vo.Filter;
@@ -10,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
@@ -27,12 +28,19 @@ public class UserService {
         return userRepository.findUsersByFilter(filter, pageable);
     }
 
-    public User findUserById(Long userId) {
+    public User findOne(Long userId) {
         return userRepository.findOne(userId);
     }
 
-    public Result<String> addUser(User user) {
-        userRepository.save(user);
-        return new Result<>(true);
+    public User save(User user) {
+        return userRepository.save(user);
+    }
+
+    public void delete(Long id) {
+        userRepository.delete(id);
+    }
+
+    public List<User> findUserByName(String username) {
+        return userRepository.findByUsername(username);
     }
 }

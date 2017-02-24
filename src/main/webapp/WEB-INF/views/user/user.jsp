@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/datatables/1.10.13/css/dataTables.bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <style>
@@ -56,11 +58,33 @@
 <div class="container">
 
     <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
-            mostly barebones HTML document.</p>
+        <table class="table table-bordere table-hover">
+            <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>张三</td>
+                <td>18</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
-
 </div><!-- /.container -->
 
 <!-- Bootstrap core JavaScript
@@ -68,5 +92,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/datatables/1.10.13/js/dataTables.bootstrap.min.js"></script>
+
 </body>
 </html>

@@ -11,7 +11,11 @@
             <appender-ref ref="Console"/>
         </root>
 
-        <logger name="com.ml" level="debug"/>
+        <logger name="org.springframework" level="INFO"/>
+
+        <logger name="com.ml" level="debug">
+            <appender-ref ref="Console"/>
+        </logger>
 
     </Loggers>
 </Configuration>
